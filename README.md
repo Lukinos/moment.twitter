@@ -9,13 +9,15 @@ Works with AMD, CommonJS and browser environments.
 
 ```javascript
 // AMD
-define(['moment-twitter'], function(moment) { moment().twitter() });
+define(['moment-twitter'], function(momentTwitter) { momentTwitter(moment); moment().twitter() });
 ```
 
 ```javascript
 // CommonJS
-var moment = require('moment-twitter');
-moment().twitter()
+var moment = require('moment');
+var momentTwitter = require('moment-twitter');
+momentTwitter(moment);
+moment.twitter()
 ```
 
 ```html
